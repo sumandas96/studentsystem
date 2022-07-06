@@ -4,6 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedStoredProcedureQueries;
+import javax.persistence.NamedStoredProcedureQuery;
+import javax.persistence.ParameterMode;
+import javax.persistence.StoredProcedureParameter;
 import javax.persistence.Table;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -12,6 +16,11 @@ import org.springframework.context.annotation.Bean;
 
 @Entity
 @Table(name="student_system")
+@NamedStoredProcedureQueries({@NamedStoredProcedureQuery(name = "first stored procedure",
+	procedureName = "getStudentAddress",
+	parameters = {@StoredProcedureParameter
+			(mode = ParameterMode.IN,name="address",type=String.class)})})
+
 public class Student {
 	
 	@Id
@@ -20,19 +29,18 @@ public class Student {
 	private String name;
 	private String address;
 	
+	public Student(int id, String name, String address) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.address = address;
+	}
 	
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	@Override
-	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", address=" + address + "]";
-	}
-	
-	
+
 	public int getId() {
 		return id;
 	}

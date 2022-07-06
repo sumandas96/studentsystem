@@ -25,4 +25,14 @@ public class StudentServiceImpl implements StudentService {
 		return studentRepo.findAll();
 	}
 
+	
+
+	public StudentServiceImpl(StudentRepo repo) {
+		// TODO Auto-generated constructor stub
+		super();
+		this.studentRepo = studentRepo;
+	}
+	
+	
+
 }
