@@ -1,10 +1,13 @@
-package com.example.StudentSystem.com.example.StudentSystem;
+package com.example.StudentSystem.com.example.StudentSystem.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+
+import com.example.StudentSystem.com.example.StudentSystem.model.Student;
+import com.example.StudentSystem.com.example.StudentSystem.repo.StudentRepo;
 
 @Service
 @Component

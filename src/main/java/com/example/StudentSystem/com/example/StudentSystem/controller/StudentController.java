@@ -1,4 +1,4 @@
-package com.example.StudentSystem.com.example.StudentSystem;
+package com.example.StudentSystem.com.example.StudentSystem.controller;
 
 
 import java.util.Arrays;
@@ -19,6 +19,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import com.example.StudentSystem.com.example.StudentSystem.model.Student;
+import com.example.StudentSystem.com.example.StudentSystem.service.StudentService;
 
 @RestController
 

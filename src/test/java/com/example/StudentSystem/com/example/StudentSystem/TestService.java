@@ -9,6 +9,10 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.example.StudentSystem.com.example.StudentSystem.repo.StudentRepo;
+import com.example.StudentSystem.com.example.StudentSystem.service.StudentService;
+import com.example.StudentSystem.com.example.StudentSystem.service.StudentServiceImpl;
+
 
 @ExtendWith(MockitoExtension.class)
 public class TestService {
